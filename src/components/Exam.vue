@@ -96,50 +96,53 @@
 <style scoped>
 .wrapper{
     box-sizing: border-box;
-    padding: 0 100px;
+    padding: 0 10rem;
     width: 100%;
-    border: 1px solid red;
+    min-width: 1200px;
 }
 .wrapper .exam {
     width:100%;
     background-color: #ffffff;
-    height: 180px;
-    margin: 10px 0;
+    margin: 1rem 0;
     display: flex;
 }
     .exam ul:nth-child(1) {
-        height: 100%;
-        flex-grow: 1;
+        width: 15%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .exam ul:nth-child(1) li{
-        margin-bottom: 20px;
-        padding: 20px;
+        margin-bottom: 2rem;
+        padding: 2rem;
 
     }
     .exam ul:nth-child(1) li a{
         color: rgb(52,181,242);
-        font-size: 24px;
+        font-size: 2.4rem;
         font-weight: 500;
     }
    .exam ul:nth-child(1) li span{
        color: #a6a6a6;
-       font-size: 12px;
+       font-size: 1.2rem;
    }
  .exam ul:nth-child(2){
-     flex-grow: 8;
-     height: 100%;
+     width: 85%;
      display: flex;
      align-items: center;
-     margin-left: 30px;
+     margin-left: 2rem;
  }
     .exam ul:nth-child(2) li{
-        flex-grow: 1;
+        width: 11%;
         display: flex;
         align-items: center;
+    }
+    ul:nth-child(2) li:last-of-type a img{
+        position: relative;
+        width: 58%;
+        top: 0;
+        left: -1rem;
     }
     ul:nth-child(2) li a{
         flex-grow: 2;
@@ -148,24 +151,23 @@
         align-items: center;
     }
     ul:nth-child(2) li a img{
-        width: 66px;
-        height: 90px;
+        width: 100%;
     }
     ul:nth-child(2) li a span{
-        font-size: 12px;
+        font-size: 1.2rem;
         color: #a6a6a6;
     }
     ul:nth-child(2) li div{
         flex-grow: 1;
         text-align: center;
+        transform: translateY(-1rem);
     }
     ul:nth-child(2) li div img{
-        width: 30px;
-        height: 30px;
+        width: 50%;
     }
  .wrapper .show{
      width: 100%;
-     margin-top: 30px;
+     margin-top: 3rem;
      display: flex;
  }
     .show li{
@@ -188,12 +190,12 @@
     .show li span {
         position: absolute;
         display: inline-block;
-        width: 30px;
+        width: 3rem;
         left: 50%;
         top: 50%;
         transform: translateX(-50%);
         transform: translateY(-50%);
-        font-size: 26px;
+        font-size: 2.6rem;
         color: #ffffff;
     }
 

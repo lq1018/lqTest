@@ -4,8 +4,8 @@
      <div class="city">福州 <a href="#">[更换]</a></div>
      <div class="searchInp">
          <ul>
-             <li :class=" this.lock ? 'active': ''" v-on:click="tab">搜套餐</li>
-             <li :class="this.lock ? ' ' : 'active'" v-on:click="tab">选医院</li>
+             <li :class=" this.lock ? 'active': ''" v-on:click="tab1">搜套餐</li>
+             <li :class="this.lock ? ' ' : 'active'" v-on:click="tab2">选医院</li>
          </ul>
          <div>
              <input type="text" :placeholder="placeholder">
@@ -25,13 +25,17 @@
             }
         },
         methods: {
-            tab: function () {
-               this.lock= this.lock?false:true;
+            tab1: function () {
+               this.lock= true;
                if(this.lock==true){
                    this.placeholder='请输入你要搜索的套餐'
-               }else {
-                   this.placeholder='请输入你要选择的医院'
                }
+            },
+            tab2:function () {
+                this.lock = false;
+                if(this.lock==false){
+                    this.placeholder='请输入你要选择的医院'
+                }
             }
 
         }
@@ -40,75 +44,79 @@
 
 <style scoped>
 .search{
+    min-width: 1200px;
     position: relative;
     width: 100%;
-    height: 120px;
     box-sizing: border-box;
-    padding: 0 100px;
+    padding: 0 10rem;
+    margin-bottom: 2rem;
 }
 .search .logo{
     position: relative;
     display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin-top: 20px;
-    left: -15px;
+    width: 8rem;
+    margin-top: 2rem;
+    left: -1.5rem;
+}
+.search .logo img{
+    width: 100%;
 }
 .search .city{
     position: absolute;
     border: 1px solid #cccccc;
-    padding: 5px 10px;
-    left: 300px;
-    top: 50px;
-    font-size: 14px;
+    padding: 0.5rem 1rem;
+    left: 30rem;
+    top: 5rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 .search .city a{
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #666666;
     font-weight: normal;
 }
 .search .searchInp{
     display: inline-block;
     position: absolute;
-    width: 300px;
-    height: 90px;
-    top: 20px;
-    left: 450px;
+    width: 30rem;
+    top: 2rem;
+    left: 45rem;
 }
 .search .searchInp ul li{
-    width: 60px;
-    height: 20px;
+    width: 6rem;
     display: inline-block;
     border: 1px solid #dddddd;
     border-bottom: none;
     text-align: center;
-    padding: 5px 7px;
+    padding: 0.7rem 0.7rem;
     cursor: pointer;
-    margin-right: 5px;
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 .search .searchInp ul li.active{
     background-color: #22aaff;
     color: #ffffff;
 }
 .search .searchInp input{
-    width: 300px;
-    height: 30px;
-    text-indent: 10px;
+    width: 30rem;
+    height: 3.5rem;
+    text-indent: 1rem;
     border: 1px solid #22aaff;
 }
 .search .searchInp .soso{
     display: inline-block;
     position: absolute;
-    height: 34px;
-    width: 80px;
+    height: 3.5rem;
+    width: 8rem;
     background-color: #22aaff;
     text-align: center;
-    line-height: 34px;
-    top:30px;
-    left: 300px;
+    line-height: 3.5rem;
+    top:3rem;
+    left: 30rem;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 1.4rem;
     cursor: pointer;
+    font-weight: bold;
 }
 </style>

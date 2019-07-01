@@ -42,40 +42,37 @@
         position: relative;
         box-sizing: border-box;
         width: 100%;
-        height: 40px;
-        padding: 0 100px;
+        min-width: 1200px;
+        padding: 0 10rem;
         background: #dddddd;
     }
     .Head .headLeft{
         display: inline-block;
-        height: 100%;
-        width: 200px;
+        width: 20rem;
     }
     .headLeft li a{
-        height: 40px;
-        line-height: 40px;
+        line-height: 4rem;
         color: #333333;
-        font-size: 16px;
+        font-size: 1.6rem;
     }
     .Head .headRight{
         display: inline-block;
         position: absolute;
-        right: 100px;
+        right: 10rem;
     }
     .headRight li{
         float: left;
-        margin-left: 20px;
+        margin-left: 2rem;
     }
     .headRight li a{
         display: inline-block;
-        height: 40px;
-        line-height: 40px;
+        line-height: 4rem;
         color: #333333;
-        font-size: 16px;
-        padding: 0 10px;
+        font-size: 1.6rem;
+        padding: 0 1rem;
     }
     .headRight li a img{
         display: inline-block;
-        margin-right: 10px;
+        margin-right: 1rem;
     }
 </style>
